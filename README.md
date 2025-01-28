@@ -25,24 +25,24 @@ Pre-processing Steps:
 After pre-processing is complete, follow following steps for the task of lung tumor segmentation from CT images:
 
 Step 1: Import the Libraries
-PyTorch and TorchVision for model building, data manipulation, and training.
-PyTorch Lightning for simplifying the training loop and integrating various features like GPU support, logging, and checkpoints.
-NumPy and Matplotlib for numerical and visualization tasks.
-Albumentations for image augmentation, including affine transformations.
-Kaggle API for importing data from Kaggle.
-Scikit-learn for utility functions like metrics.
+- PyTorch and TorchVision for model building, data manipulation, and training.
+- PyTorch Lightning for simplifying the training loop and integrating various features like GPU support, logging, and checkpoints.
+- NumPy and Matplotlib for numerical and visualization tasks.
+- Albumentations for image augmentation, including affine transformations.
+- Kaggle API for importing data from Kaggle.
+- Scikit-learn for utility functions like metrics.
 
 Step 2: Create Dataset and Import Data
-2(A): Import dataset from Kaggle:
-Use the Kaggle API to download the lung tumor segmentation dataset (or other relevant datasets).
-2(B): Define path to training and validation data:
-Define the paths where the training and validation image and mask data are stored (e.g., /data/train_images/, /data/val_images/).
-2(C): Define augmentation:
-Apply affine augmentations (such as rotations, scaling, and translations) using Albumentations to further improve model generalization. These augmentations ensure better robustness and performance on diverse variations in the data.
-2(D): Create dataset:
-Create a custom PyTorch dataset class that loads the images and corresponding masks, applies the necessary augmentations, and returns them as tensors.
-2(E): Pass training and validation data to dataset class:
-Instantiate the dataset class for both training and validation data, ensuring proper data format and augmentation.
+  2(A): Import dataset from Kaggle:
+    - Use the Kaggle API to download the lung tumor segmentation dataset (or other relevant datasets).
+  2(B): Define path to training and validation data:
+    - Define the paths where the training and validation image and mask data are stored (e.g., /data/train_images/, /data/val_images/).
+  2(C): Define augmentation:
+    - Apply affine augmentations (such as rotations, scaling, and translations) using Albumentations to further improve model generalization. These augmentations ensure better robustness and performance on diverse variations in the data.
+  2(D): Create dataset:
+    - Create a custom PyTorch dataset class that loads the images and corresponding masks, applies the necessary augmentations, and returns them as tensors.
+  2(E): Pass training and validation data to dataset class:
+    - Instantiate the dataset class for both training and validation data, ensuring proper data format and augmentation.
 
 
 Step 3: Implement Oversampling to Handle Strong Class Imbalance
