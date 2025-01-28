@@ -33,15 +33,15 @@ Step 1: Import the Libraries
 - Scikit-learn for utility functions like metrics.
 
 Step 2: Create Dataset and Import Data
-  2(A): Import dataset from Kaggle:
+  - 2(A): Import dataset from Kaggle:
     - Use the Kaggle API to download the lung tumor segmentation dataset (or other relevant datasets).
-  2(B): Define path to training and validation data:
+  - 2(B): Define path to training and validation data:
     - Define the paths where the training and validation image and mask data are stored (e.g., /data/train_images/, /data/val_images/).
-  2(C): Define augmentation:
+  - 2(C): Define augmentation:
     - Apply affine augmentations (such as rotations, scaling, and translations) using Albumentations to further improve model generalization. These augmentations ensure better robustness and performance on diverse variations in the data.
-  2(D): Create dataset:
+  - 2(D): Create dataset:
     - Create a custom PyTorch dataset class that loads the images and corresponding masks, applies the necessary augmentations, and returns them as tensors.
-  2(E): Pass training and validation data to dataset class:
+  - 2(E): Pass training and validation data to dataset class:
     - Instantiate the dataset class for both training and validation data, ensuring proper data format and augmentation.
 
 
